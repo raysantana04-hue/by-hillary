@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>By Hillary</title>
+<title>By Hillary | Moda Feminina</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -16,109 +16,168 @@
 
 <header>
 
-  <img src="logo.jpeg" class="logo" alt="By Hillary">
+<img src="logo.jpeg" alt="By Hillary" class="logo">
 
-  <h1>By Hillary 💖</h1>
+<h1>By Hillary 💖</h1>
 
-  <p>Moda Feminina Elegante</p>
-
-</header>
-  <img src="logo.png" class="logo">
-
-  <h1>By Hillary 💖</h1>
-
-  <p>
-    Moda feminina elegante
-  </p>
+<p>Moda Feminina Elegante</p>
 
 </header>
 
 <nav>
 
-  <a href="#">Início</a>
-  <a href="#">Novidades</a>
-  <a href="#">Vestidos</a>
-  <a href="#">Contato</a>
+<a href="#inicio">Início</a>
+<a href="#produtos">Produtos</a>
+<a href="#carrinho">Carrinho</a>
+<a href="#contato">Contato</a>
 
 </nav>
 
 <section class="banner">
 
-  <img src="banner.jpg">
+<img
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200"
+alt="Banner By Hillary">
 
 </section>
 
 <section class="busca">
 
-  <input
-  type="text"
-  id="pesquisa"
-  placeholder="Buscar produtos..."
-  onkeyup="buscarProduto()">
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar produto..."
+onkeyup="buscarProduto()">
 
 </section>
 
-<section class="produtos"
-id="catalogoProdutos">
+<section id="produtos" class="produtos">
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500"
+alt="Vestido Floral">
+
+<h2>Vestido Floral</h2>
+
+<p>R$ 59,90</p>
+
+<select>
+
+<option>P</option>
+<option>M</option>
+<option>G</option>
+<option>U</option>
+
+</select>
+
+<button>
+Adicionar ao Carrinho
+</button>
+
+</div>
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500"
+alt="Conjunto Feminino">
+
+<h2>Conjunto Chic</h2>
+
+<p>R$ 79,90</p>
+
+<select>
+
+<option>P</option>
+<option>M</option>
+<option>G</option>
+<option>U</option>
+
+</select>
+
+<button>
+Adicionar ao Carrinho
+</button>
+
+</div>
 
 </section>
 
-<section class="carrinho">
+<section id="carrinho" class="carrinho">
 
-<h2>
-Carrinho 🛒
-</h2>
+<h2>🛒 Carrinho</h2>
 
-<ul id="carrinho"></ul>
+<ul id="listaCarrinho">
 
-<h3>
-Cupom 🎟️
-</h3>
+<li>Nenhum produto adicionado.</li>
+
+</ul>
+
+<h3>Cupom de Desconto</h3>
 
 <input
 type="text"
-id="cupom"
 placeholder="Digite seu cupom">
 
-<button onclick="aplicarCupom()">
-Aplicar
+<button>
+Aplicar Cupom
 </button>
 
-<p id="desconto">
-Desconto: R$ 0,00
-</p>
-
-<h3>
-Frete 🚚
-</h3>
+<h3>Frete</h3>
 
 <input
 type="text"
-id="cep"
 placeholder="Digite seu CEP">
 
-<button onclick="calcularFrete()">
-Calcular
+<button>
+Calcular Frete
 </button>
 
-<p id="frete">
+<p>
 Frete: R$ 0,00
 </p>
 
-<h2 id="total">
+<h2>
 Total: R$ 0,00
 </h2>
 
-<a href="#">
 <button class="finalizar">
 Finalizar Compra 💳
 </button>
+
+</section>
+
+<section id="contato" class="carrinho">
+
+<h2>Fale Conosco 💖</h2>
+
+<p>
+WhatsApp:
+</p>
+
+<a href="https://wa.me/5511947676601">
+
+<button class="finalizar">
+
+Chamar no WhatsApp
+
+</button>
+
 </a>
 
 </section>
 
+<footer style="text-align:center;padding:30px;">
+
+<p>
+© 2026 By Hillary - Todos os direitos reservados
+</p>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
-
 </html>
