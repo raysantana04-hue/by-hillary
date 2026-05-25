@@ -1,12 +1,9 @@
-body{
-
-  margin:0;
-  font-family:Arial;
-  background:#fff0f5;
-
+.logo{
+  width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
 }
-
-header{
 
   text-align:center;
   background:#ffd6e7;
