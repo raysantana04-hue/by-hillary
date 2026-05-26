@@ -2,13 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>By Hillary | Moda Feminina</title>
+<title>By Hillary</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -16,75 +18,93 @@
 
 <header>
 
-<img src="logo.jpeg" alt="Logo By Hillary" class="logo">
+<div class="topo">
+
+<img src="logo.jpeg" class="logo">
+
+<div class="titulo">
+
+<h1>By Hillary ♡</h1>
+
+<p>Moda Feminina Elegante</p>
+
+</div>
+
+<div class="icones">
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="https://wa.me/5511947676601">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
 
 <nav>
 
-<a href="#">Início</a>
-<a href="#produtos">Loja</a>
-<a href="#contato">Contato</a>
+<a href="#">🏠 Início</a>
+
+<a href="#">✨ Novidades</a>
+
+<a href="#">👗 Vestidos</a>
+
+<a href="#">👜 Conjuntos</a>
+
+<a href="#contato">📞 Contato</a>
 
 </nav>
 
 </header>
 
-<section class="hero">
+<section class="banner">
 
-<div class="hero-texto">
+<div class="texto-banner">
 
-<span class="subtitulo">
-✨ BEM-VINDA À
-</span>
+<h2>Coleção Exclusiva</h2>
 
-<h1>By Hillary 💖</h1>
+<h1>By Hillary ♡</h1>
 
-<p>
-Estilo que realça sua essência.
-Peças exclusivas para mulheres únicas.
-</p>
-
-<a href="#produtos">
-
-<button class="btn-comprar">
-COMPRAR AGORA
+<button>
+COMPRE AGORA
 </button>
 
-</a>
-
 </div>
 
-<div class="hero-imagem">
+<div class="imagem-banner">
 
-<img src="boneca-byhillary.png" alt="Boneca By Hillary">
+<img src="boneca-banner.png">
 
 </div>
 
 </section>
 
-<section class="beneficios">
+<section class="busca">
 
-<div>🚚 Frete Grátis</div>
-<div>💳 Parcele em até 6x</div>
-<div>🔒 Compra Segura</div>
-<div>🔄 Troca Garantida</div>
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar produtos..."
+onkeyup="buscarProduto()">
 
 </section>
 
-<section id="produtos">
+<div class="conteudo">
 
-<h2 class="titulo">
-Coleção By Hillary
-</h2>
+<section class="produtos">
 
-<div class="produtos">
+<h2>🎀 NOSSAS BONECAS</h2>
+
+<div class="grid">
 
 <div class="card">
 
-<img src="produto1.jpg" alt="Conjunto Rosa">
+<img src="boneca1.png">
 
-<h3>Conjunto Rosa Luxo</h3>
+<h3>Vestido Floral</h3>
 
-<p>R$ 129,90</p>
+<p>R$ 59,90</p>
 
 <select>
 <option>P</option>
@@ -93,19 +113,19 @@ Coleção By Hillary
 <option>U</option>
 </select>
 
-<button onclick="adicionarCarrinho('Conjunto Rosa Luxo',129.90)">
-Adicionar ao Carrinho
+<button onclick="adicionarCarrinho('Vestido Floral',59.90)">
+🛒 Adicionar ao Carrinho
 </button>
 
 </div>
 
 <div class="card">
 
-<img src="produto2.jpg" alt="Vestido">
+<img src="boneca2.png">
 
-<h3>Vestido Elegance</h3>
+<h3>Conjunto Chic</h3>
 
-<p>R$ 149,90</p>
+<p>R$ 79,90</p>
 
 <select>
 <option>P</option>
@@ -114,19 +134,19 @@ Adicionar ao Carrinho
 <option>U</option>
 </select>
 
-<button onclick="adicionarCarrinho('Vestido Elegance',149.90)">
-Adicionar ao Carrinho
+<button onclick="adicionarCarrinho('Conjunto Chic',79.90)">
+🛒 Adicionar ao Carrinho
 </button>
 
 </div>
 
 <div class="card">
 
-<img src="produto3.jpg" alt="Macacão">
+<img src="boneca3.png">
 
-<h3>Macacão Fashion</h3>
+<h3>Vestido Preto</h3>
 
-<p>R$ 169,90</p>
+<p>R$ 69,90</p>
 
 <select>
 <option>P</option>
@@ -135,8 +155,50 @@ Adicionar ao Carrinho
 <option>U</option>
 </select>
 
-<button onclick="adicionarCarrinho('Macacão Fashion',169.90)">
-Adicionar ao Carrinho
+<button onclick="adicionarCarrinho('Vestido Preto',69.90)">
+🛒 Adicionar ao Carrinho
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="boneca4.png">
+
+<h3>Conjunto Branco</h3>
+
+<p>R$ 89,90</p>
+
+<select>
+<option>P</option>
+<option>M</option>
+<option>G</option>
+<option>U</option>
+</select>
+
+<button onclick="adicionarCarrinho('Conjunto Branco',89.90)">
+🛒 Adicionar ao Carrinho
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="boneca5.png">
+
+<h3>Vestido Rosa</h3>
+
+<p>R$ 64,90</p>
+
+<select>
+<option>P</option>
+<option>M</option>
+<option>G</option>
+<option>U</option>
+</select>
+
+<button onclick="adicionarCarrinho('Vestido Rosa',64.90)">
+🛒 Adicionar ao Carrinho
 </button>
 
 </div>
@@ -145,15 +207,15 @@ Adicionar ao Carrinho
 
 </section>
 
-<section class="carrinho">
+<aside class="carrinho">
 
-<h2>🛒 Meu Carrinho</h2>
+<h2>🛒 Carrinho</h2>
 
 <ul id="listaCarrinho">
 
 </ul>
 
-<h3>Cupom 🎟️</h3>
+<h3>Cupom de Desconto 🎟️</h3>
 
 <input
 type="text"
@@ -161,14 +223,10 @@ id="cupom"
 placeholder="Digite seu cupom">
 
 <button onclick="aplicarCupom()">
-Aplicar Cupom
+Aplicar
 </button>
 
-<p id="desconto">
-Desconto: R$ 0,00
-</p>
-
-<h3>Frete 🚚</h3>
+<h3>🚚 Calcular Frete</h3>
 
 <input
 type="text"
@@ -176,11 +234,15 @@ id="cep"
 placeholder="Digite seu CEP">
 
 <button onclick="calcularFrete()">
-Calcular Frete
+Calcular
 </button>
 
 <p id="frete">
 Frete: R$ 0,00
+</p>
+
+<p id="desconto">
+Desconto: R$ 0,00
 </p>
 
 <h3 id="total">
@@ -191,28 +253,28 @@ Total: R$ 0,00
 
 <button class="finalizar">
 
-Finalizar Pedido no WhatsApp
+Finalizar Compra
 
 </button>
 
 </a>
 
-</section>
+</aside>
 
-<section id="contato">
+</div>
 
-<h2>Contato 💖</h2>
+<footer id="contato">
+
+<p>Siga-nos nas redes sociais</p>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-whatsapp"></i>
+
+<i class="fab fa-tiktok"></i>
 
 <p>
-WhatsApp: (11) 94767-6601
-</p>
-
-</section>
-
-<footer>
-
-<p>
-© 2026 By Hillary - Moda Feminina
+© 2026 By Hillary - Todos os direitos reservados
 </p>
 
 </footer>
@@ -220,5 +282,4 @@ WhatsApp: (11) 94767-6601
 <script src="script.js"></script>
 
 </body>
-
 </html>
