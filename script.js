@@ -1,217 +1,138 @@
-let produtos = [
-
-{
-
-nome:"Vestido Floral",
-preco:59.90,
-estoque:5,
-imagem:"https://via.placeholder.com/300x350.png?text=Vestido"
-
-},
-
-{
-
-nome:"Conjunto Chic",
-preco:79.90,
-estoque:3,
-imagem:"https://via.placeholder.com/300x350.png?text=Conjunto"
-
-}
-
-];
-
 let total = 0;
-let desconto = 0;
 let frete = 0;
+let desconto = 0;
 
-renderizarCatalogo();
+function adicionarCarrinho(produto, preco){
 
-function renderizarCatalogo(){
+  let lista =
+  document.getElementById("listaCarrinho");
 
-let catalogo =
-document.getElementById(
-"catalogoProdutos"
-);
+  let item =
+  document.createElement("li");
 
-catalogo.innerHTML = "";
+  item.innerHTML = `
+    ${produto} - R$ ${preco.toFixed(2)}
+    <button onclick="removerItem(this, ${preco})">
+      ❌
+    </button>
+  `;
 
-produtos.forEach((produto,index)=>{
+  lista.appendChild(item);
 
-catalogo.innerHTML += `
+  total += preco;
 
-<div class="card">
-
-<img src="${produto.imagem}">
-
-<h2>${produto.nome}</h2>
-
-<p>
-R$ ${produto.preco}
-</p>
-
-<p>
-Estoque:
-${produto.estoque}
-</p>
-
-<select id="tamanho${index}">
-
-<option>P</option>
-<option>M</option>
-<option>G</option>
-<option>U</option>
-
-</select>
-
-<button
-onclick="adicionarCarrinho(${index})">
-
-Adicionar ao Carrinho
-
-</button>
-
-</div>
-
-`;
-
-});
+  atualizarTotal();
 
 }
 
-function adicionarCarrinho(index){
+function removerItem(botao, preco){
 
-let produto = produtos[index];
+  botao.parentElement.remove();
 
-if(produto.estoque <= 0){
+  total -= preco;
 
-alert("Produto esgotado ❌");
-return;
+  if(total < 0){
+    total = 0;
+  }
 
-}
-
-produto.estoque--;
-
-renderizarCatalogo();
-
-let tamanho =
-document.getElementById(
-"tamanho"+index
-).value;
-
-let lista =
-document.getElementById(
-"carrinho"
-);
-
-let item =
-document.createElement("li");
-
-item.innerHTML =
-
-`${produto.nome}
-- Tamanho ${tamanho}
-- R$ ${produto.preco}`;
-
-lista.appendChild(item);
-
-total += produto.preco;
-
-atualizarTotal();
-
-}
-
-function aplicarCupom(){
-
-let cupom =
-document.getElementById(
-"cupom"
-).value;
-
-desconto = 0;
-
-if(cupom == "HILLARY10"){
-
-desconto =
-total * 0.10;
-
-}
-
-document.getElementById(
-"desconto"
-).innerHTML =
-
-"Desconto: R$ " +
-desconto.toFixed(2);
-
-atualizarTotal();
+  atualizarTotal();
 
 }
 
 function calcularFrete(){
 
-let cep =
-document.getElementById(
-"cep"
-).value;
+  let cep =
+  document.getElementById("cep").value;
 
-frete = 15;
+  if(cep.length < 8){
 
-if(cep.startsWith("0")){
+    alert("Digite um CEP válido");
 
-frete = 25;
+    return;
+
+  }
+
+  frete = 15;
+
+  if(cep.startsWith("0")){
+    frete = 25;
+  }
+
+  document.getElementById("frete").innerHTML =
+  "Frete: R$ " + frete.toFixed(2);
+
+  atualizarTotal();
 
 }
 
-document.getElementById(
-"frete"
-).innerHTML =
+function aplicarCupom(){
 
-"Frete: R$ " +
-frete.toFixed(2);
+  let cupom =
+  document.getElementById("cupom").value;
 
-atualizarTotal();
+  desconto = 0;
+
+  if(cupom.toUpperCase() === "HILLARY10"){
+
+    desconto = total * 0.10;
+
+    alert("Cupom aplicado! 💖");
+
+  } else {
+
+    alert("Cupom inválido");
+
+  }
+
+  document.getElementById("desconto").innerHTML =
+  "Desconto: R$ " +
+  desconto.toFixed(2);
+
+  atualizarTotal();
 
 }
 
 function atualizarTotal(){
 
-let totalFinal =
-total + frete - desconto;
+  let totalFinal =
+  total + frete - desconto;
 
-document.getElementById(
-"total"
-).innerHTML =
+  if(totalFinal < 0){
+    totalFinal = 0;
+  }
 
-"Total: R$ " +
-totalFinal.toFixed(2);
+  document.getElementById("total").innerHTML =
+  "Total: R$ " +
+  totalFinal.toFixed(2);
 
 }
 
 function buscarProduto(){
 
-let pesquisa =
-document.getElementById(
-"pesquisa"
-).value.toLowerCase();
+  let pesquisa =
+  document.getElementById("pesquisa")
+  .value
+  .toLowerCase();
 
-let cards =
-document.querySelectorAll(".card");
+  let cards =
+  document.querySelectorAll(".card");
 
-cards.forEach(card=>{
+  cards.forEach(card => {
 
-if(
-card.innerText.toLowerCase()
-.includes(pesquisa)
-){
+    if(
+      card.innerText
+      .toLowerCase()
+      .includes(pesquisa)
+    ){
 
-card.style.display="block";
+      card.style.display = "block";
 
-}else{
+    } else {
 
-card.style.display="none";
+      card.style.display = "none";
 
-}
+    }
 
-});
+  });
 
 }
