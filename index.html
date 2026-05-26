@@ -122,12 +122,20 @@ Adicionar ao Carrinho
 <option>U</option>
 </select>
 
-<button onclick="adicionarCarrinho('Vestido Elegance',149.90)">
-Adicionar ao Carrinho
+<h3>Frete 🚚</h3>
+
+<input
+type="text"
+id="cep"
+placeholder="Digite seu CEP">
+
+<button onclick="calcularFrete()">
+Calcular Frete
 </button>
 
-</div>
-
+<p id="frete">
+Frete: R$ 0,00
+</p>
 <div class="card">
 
 <img src="produto3.jpg">
