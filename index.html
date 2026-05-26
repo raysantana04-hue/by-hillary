@@ -2,12 +2,14 @@
 <html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>By Hillary | Moda Feminina</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -20,7 +22,6 @@
 
 <a href="#">Início</a>
 <a href="#produtos">Loja</a>
-<a href="#novidades">Lançamentos</a>
 <a href="#contato">Contato</a>
 
 </nav>
@@ -43,9 +44,11 @@ Peças exclusivas para mulheres únicas.
 </p>
 
 <a href="#produtos">
+
 <button class="btn-comprar">
 COMPRAR AGORA
 </button>
+
 </a>
 
 </div>
@@ -60,21 +63,10 @@ COMPRAR AGORA
 
 <section class="beneficios">
 
-<div>
-🚚 Frete Grátis
-</div>
-
-<div>
-💳 Parcele em até 6x
-</div>
-
-<div>
-🔒 Compra Segura
-</div>
-
-<div>
-🔄 Troca Garantida
-</div>
+<div>🚚 Frete Grátis</div>
+<div>💳 Parcele em até 6x</div>
+<div>🔒 Compra Segura</div>
+<div>🔄 Troca Garantida</div>
 
 </section>
 
@@ -88,7 +80,7 @@ Coleção By Hillary
 
 <div class="card">
 
-<img src="produto1.jpg">
+<img src="produto1.jpg" alt="Conjunto Rosa">
 
 <h3>Conjunto Rosa Luxo</h3>
 
@@ -109,7 +101,7 @@ Adicionar ao Carrinho
 
 <div class="card">
 
-<img src="produto2.jpg">
+<img src="produto2.jpg" alt="Vestido">
 
 <h3>Vestido Elegance</h3>
 
@@ -122,23 +114,15 @@ Adicionar ao Carrinho
 <option>U</option>
 </select>
 
-<h3>Frete 🚚</h3>
-
-<input
-type="text"
-id="cep"
-placeholder="Digite seu CEP">
-
-<button onclick="calcularFrete()">
-Calcular Frete
+<button onclick="adicionarCarrinho('Vestido Elegance',149.90)">
+Adicionar ao Carrinho
 </button>
 
-<p id="frete">
-Frete: R$ 0,00
-</p>
+</div>
+
 <div class="card">
 
-<img src="produto3.jpg">
+<img src="produto3.jpg" alt="Macacão">
 
 <h3>Macacão Fashion</h3>
 
@@ -169,6 +153,36 @@ Adicionar ao Carrinho
 
 </ul>
 
+<h3>Cupom 🎟️</h3>
+
+<input
+type="text"
+id="cupom"
+placeholder="Digite seu cupom">
+
+<button onclick="aplicarCupom()">
+Aplicar Cupom
+</button>
+
+<p id="desconto">
+Desconto: R$ 0,00
+</p>
+
+<h3>Frete 🚚</h3>
+
+<input
+type="text"
+id="cep"
+placeholder="Digite seu CEP">
+
+<button onclick="calcularFrete()">
+Calcular Frete
+</button>
+
+<p id="frete">
+Frete: R$ 0,00
+</p>
+
 <h3 id="total">
 Total: R$ 0,00
 </h3>
@@ -187,9 +201,11 @@ Finalizar Pedido no WhatsApp
 
 <section id="contato">
 
-<h2>Contato</h2>
+<h2>Contato 💖</h2>
 
-<p>WhatsApp: (11) 94767-6601</p>
+<p>
+WhatsApp: (11) 94767-6601
+</p>
 
 </section>
 
@@ -201,26 +217,7 @@ Finalizar Pedido no WhatsApp
 
 </footer>
 
-<script>
-
-let carrinho = [];
-let total = 0;
-
-function adicionarCarrinho(produto, preco){
-
-carrinho.push(produto);
-
-total += preco;
-
-document.getElementById("listaCarrinho").innerHTML +=
-"<li>" + produto + " - R$ " + preco.toFixed(2) + "</li>";
-
-document.getElementById("total").innerHTML =
-"Total: R$ " + total.toFixed(2);
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
