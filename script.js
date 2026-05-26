@@ -4,10 +4,10 @@ let desconto = 0;
 
 function adicionarCarrinho(produto, preco){
 
-  let lista =
+  const lista =
   document.getElementById("listaCarrinho");
 
-  let item =
+  const item =
   document.createElement("li");
 
   item.innerHTML = `
@@ -22,7 +22,6 @@ function adicionarCarrinho(produto, preco){
   total += preco;
 
   atualizarTotal();
-
 }
 
 function removerItem(botao, preco){
@@ -36,20 +35,18 @@ function removerItem(botao, preco){
   }
 
   atualizarTotal();
-
 }
 
 function calcularFrete(){
 
-  let cep =
+  const cep =
   document.getElementById("cep").value;
 
   if(cep.length < 8){
 
-    alert("Digite um CEP válido");
+    alert("Digite um CEP válido.");
 
     return;
-
   }
 
   frete = 15;
@@ -62,34 +59,32 @@ function calcularFrete(){
   "Frete: R$ " + frete.toFixed(2);
 
   atualizarTotal();
-
 }
 
 function aplicarCupom(){
 
-  let cupom =
-  document.getElementById("cupom").value;
+  const cupom =
+  document.getElementById("cupom")
+  .value
+  .toUpperCase();
 
   desconto = 0;
 
-  if(cupom.toUpperCase() === "HILLARY10"){
+  if(cupom === "HILLARY10"){
 
     desconto = total * 0.10;
 
-    alert("Cupom aplicado! 💖");
+    alert("Cupom aplicado com sucesso! 💖");
 
-  } else {
+  }else{
 
-    alert("Cupom inválido");
-
+    alert("Cupom inválido.");
   }
 
   document.getElementById("desconto").innerHTML =
-  "Desconto: R$ " +
-  desconto.toFixed(2);
+  "Desconto: R$ " + desconto.toFixed(2);
 
   atualizarTotal();
-
 }
 
 function atualizarTotal(){
@@ -102,35 +97,31 @@ function atualizarTotal(){
   }
 
   document.getElementById("total").innerHTML =
-  "Total: R$ " +
-  totalFinal.toFixed(2);
-
+  "Total: R$ " + totalFinal.toFixed(2);
 }
 
 function buscarProduto(){
 
-  let pesquisa =
+  const pesquisa =
   document.getElementById("pesquisa")
   .value
   .toLowerCase();
 
-  let cards =
+  const cards =
   document.querySelectorAll(".card");
 
   cards.forEach(card => {
 
-    if(
-      card.innerText
-      .toLowerCase()
-      .includes(pesquisa)
-    ){
+    const texto =
+    card.innerText.toLowerCase();
+
+    if(texto.includes(pesquisa)){
 
       card.style.display = "block";
 
-    } else {
+    }else{
 
       card.style.display = "none";
-
     }
 
   });
