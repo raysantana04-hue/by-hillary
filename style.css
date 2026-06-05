@@ -57,32 +57,46 @@ header{
 
 /* MENU */
 
-nav{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background: #ffd6e7;
-  padding-top: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+.menu-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  background:#d63384;
+  color:white;
+  border:none;
+  font-size:30px;
+  padding:10px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  z-index:1001;
 }
 
-nav a{
-  color: #d63384;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 15px 20px;
-  border-radius: 10px;
-  margin: 0 10px;
-  transition: 0.3s;
+#menuLateral{
+  position:fixed;
+  top:0;
+  left:-250px;
+  width:220px;
+  height:100vh;
+  background:#ffd6e7;
+  transition:0.3s;
+  padding-top:80px;
+  z-index:1000;
 }
 
-nav a:hover{
-  background: white;
+#menuLateral.ativo{
+  left:0;
+}
+
+#menuLateral a{
+  display:block;
+  padding:15px 20px;
+  color:#d63384;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#menuLateral a:hover{
+  background:white;
 }
 /* BANNER */
 
