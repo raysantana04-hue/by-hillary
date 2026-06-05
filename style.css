@@ -58,12 +58,30 @@ header{
 /* MENU */
 
 nav{
-  background:white;
+  position:fixed;
+  left:0;
+  top:0;
+  width:220px;
+  height:100vh;
+  background:#ffd6e7;
+  padding-top:150px;
   display:flex;
-  justify-content:center;
-  gap:20px;
-  padding:15px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  gap:15px;
+  box-shadow:2px 0 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+  color:#d63384;
+  text-decoration:none;
+  font-weight:bold;
+  padding:15px 20px;
+  border-radius:10px;
+  margin:0 10px;
+}
+
+nav a:hover{
+  background:white;
 }
 
 nav a{
