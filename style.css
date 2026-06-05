@@ -325,5 +325,47 @@ footer i{
   body{
   margin-left: 220px;
 }
+  .menu-btn{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  border: none;
+  background: #d63384;
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#menuLateral{
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background: #ffd6e7;
+  padding-top: 80px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#menuLateral a{
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #d63384;
+  font-weight: bold;
+}
+
+#menuLateral a:hover{
+  background: white;
+}
+
+#menuLateral.ativo{
+  left: 0;
+}
 
 }
