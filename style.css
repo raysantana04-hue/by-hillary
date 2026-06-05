@@ -58,38 +58,32 @@ header{
 /* MENU */
 
 nav{
-  position:fixed;
-  left:0;
-  top:0;
-  width:220px;
-  height:100vh;
-  background:#ffd6e7;
-  padding-top:150px;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  box-shadow:2px 0 10px rgba(0,0,0,0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background: #ffd6e7;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
 nav a{
-  color:#d63384;
-  text-decoration:none;
-  font-weight:bold;
-  padding:15px 20px;
-  border-radius:10px;
-  margin:0 10px;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
 nav a:hover{
-  background:white;
+  background: white;
 }
-
-nav a{
-  text-decoration:none;
-  color:#d63384;
-  font-weight:bold;
-}
-
 /* BANNER */
 
 .banner{
@@ -328,5 +322,8 @@ footer i{
     justify-content:center;
     gap:15px;
   }
+  body{
+  margin-left: 220px;
+}
 
 }
