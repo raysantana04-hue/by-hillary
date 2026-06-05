@@ -104,27 +104,26 @@ text-decoration:none;
 /* BANNER */
 
 .banner{
-background:linear-gradient(
-135deg,
-#ffd6e7,
-#ffc2db
-);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:40px;
-flex-wrap:wrap;
+  background:linear-gradient(
+    135deg,
+    #f8e8dd,
+    #e8cbb3
+  );
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px;
+  flex-wrap:wrap;
 }
-
 .texto-banner{
 flex:1;
 }
 
 .texto-banner h1{
-color:#d63384;
-font-size:70px;
+  color:#8b5e3c;
+  font-size:70px;
+  font-weight:700;
 }
-
 .texto-banner h2{
 color:#b85f86;
 }
@@ -179,8 +178,7 @@ flex:3;
 }
 
 .produtos h2{
-color:#d63384;
-margin-bottom:20px;
+  color:#8b5e3c;
 }
 
 .grid{
@@ -205,8 +203,7 @@ border-radius:10px;
 }
 
 .card h3{
-color:#d63384;
-margin-top:10px;
+  color:#8b5e3c;
 }
 
 .card p{
@@ -222,13 +219,16 @@ margin-bottom:10px;
 }
 
 .card button{
-width:100%;
-background:#d63384;
-color:white;
-border:none;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
+  background:#8b5e3c;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  transition:.3s;
+}
+.card button:hover,
+.texto-banner button:hover{
+  background:#6f4a2f;
 }
 
 /* CARRINHO */
@@ -243,7 +243,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.08);
 
 .carrinho h2,
 .carrinho h3{
-color:#d63384;
+  color:#8b5e3c;
 }
 
 .carrinho ul{
@@ -286,10 +286,11 @@ background:#25D366 !important;
 /* RODAPÉ */
 
 footer{
-background:#ffe6ee;
-text-align:center;
-padding:30px;
-margin-top:30px;
+  background:#8b5e3c;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:30px;
 }
 
 footer i{
