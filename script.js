@@ -127,3 +127,11 @@ function buscarProduto(){
   });
 
 }
+function abrirMenu(){
+
+  const menu =
+  document.getElementById("menuLateral");
+
+  menu.classList.toggle("ativo");
+
+}
