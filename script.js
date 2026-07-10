@@ -135,3 +135,58 @@ function abrirMenu(){
   menu.classList.toggle("ativo");
 
 }
+function descobrirTamanho(){
+
+    let altura = Number(document.getElementById("altura").value);
+    let peso = Number(document.getElementById("peso").value);
+
+    if(!altura || !peso){
+        document.getElementById("resultadoProvador").innerHTML =
+        "Preencha sua altura e peso.";
+        return;
+    }
+
+    let tamanho = "";
+
+    if(altura <= 160){
+
+        if(peso <= 55){
+            tamanho = "P";
+        }else if(peso <= 68){
+            tamanho = "M";
+        }else if(peso <= 82){
+            tamanho = "G";
+        }else{
+            tamanho = "GG";
+        }
+
+    }else if(altura <= 170){
+
+        if(peso <= 60){
+            tamanho = "P";
+        }else if(peso <= 72){
+            tamanho = "M";
+        }else if(peso <= 86){
+            tamanho = "G";
+        }else{
+            tamanho = "GG";
+        }
+
+    }else{
+
+        if(peso <= 65){
+            tamanho = "P";
+        }else if(peso <= 78){
+            tamanho = "M";
+        }else if(peso <= 92){
+            tamanho = "G";
+        }else{
+            tamanho = "GG";
+        }
+
+    }
+
+    document.getElementById("resultadoProvador").innerHTML =
+
+    "💖 Recomendamos o tamanho <strong>"+tamanho+"</strong><br><br>Essa é uma sugestão baseada na altura e no peso informados.";
+}
